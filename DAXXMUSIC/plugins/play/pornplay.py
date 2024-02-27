@@ -89,11 +89,7 @@ def get_video_info(title):
 
 @app.on_message(filters.command("porn"))
 async def get_random_video_info(client, message):
-      chat_id = message.chat.id
-    if message.chat.type == ChatType.PRIVATE:
-        return await message.reply("๏ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴘs.")
-
-    is_admin = False
+        is_admin = False
     try:
         participant = await client.get_chat_member(chat_id, message.from_user.id)
     except UserNotParticipant:
