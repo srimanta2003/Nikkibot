@@ -8,6 +8,10 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardBu
 from pytgcalls.types import AudioVideoPiped
 from DAXXMUSIC.plugins.play import play
 from DAXXMUSIC.plugins.play.pornplay import play
+from pyrogram import Client, filters
+from pyrogram.enums import ChatType, ChatMemberStatus
+from pyrogram.errors import UserNotParticipant
+from pyrogram.types import ChatPermission
 
 #
 #####
