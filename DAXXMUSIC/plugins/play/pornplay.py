@@ -85,30 +85,24 @@ def get_video_info(title):
 
 @app.on_message(filters.command("porn"))
 async def get_random_video_info(client, message):
-     try:
-        participant = await client.get_chat_member(message.chat.id, message.from_user.id)
-    except UserNotParticipant:
-        is_admin = False
-    else:
-        if participant.status in (
-            ChatMemberStatus.ADMINISTRATOR,
-            ChatMemberStatus.OWNER
-        ):
-            is_admin = True
-    if not is_admin:
-        return await message.reply("𝐘𝐨𝐮 𝐀𝐫𝐞 𝐍𝐨𝐭 𝐀𝐝𝐦𝐢𝐧 𝐁𝐚𝐛𝐲, 𝐎𝐧𝐥𝐲 𝐀𝐝𝐦𝐢𝐧𝐬 𝐂𝐚𝐧 𝐏𝐥𝐚𝐲 𝐏𝐨𝐫𝐧.")
-            
-            if len(message.command) == 1:
-                    await message.reply("Please provide a title to search.")
-                    return
-                    title = ' '.join(message.command[1:])
-                    video_info = get_video_info(title)
-                    
-                        if video_info:
-                                video_link = video_info['link']
-                                video = await get_video_stream(video_link)
-                                vdo_link[message.chat.id] = {'link': video_link}
-                                keyboard1 = InlineKeyboardMarkup([
+     if message.from_user.id not in SUDOERS:
+                  admins = adminlist.get(message.chat.id)
+                  if not admins:
+                        return await message.reply_text("not found")
+                  else:
+                        if message.from_user.id in admins:
+                                if len(message.command) == 1:
+                                    await message.reply("Please provide a title to search.")
+                                    return
+
+                                title = ' '.join(message.command[1:])
+                                video_info = get_video_info(title)
+
+                                if video_info:
+                                    video_link = video_info['link']
+                                    video = await get_video_stream(video_link)
+                                    vdo_link[message.chat.id] = {'link': video_link}
+                                    keyboard1 = InlineKeyboardMarkup([
                                         [
                                             InlineKeyboardButton("⊝ ᴄʟᴏsᴇ ⊝", callback_data="close_data"), 
                                             InlineKeyboardButton("⊝ ᴠᴘʟᴀʏ⊝", callback_data=f"vplay"),
