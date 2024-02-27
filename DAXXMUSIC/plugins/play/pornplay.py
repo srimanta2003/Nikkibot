@@ -8,10 +8,6 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardBu
 from pytgcalls.types import AudioVideoPiped
 from DAXXMUSIC.plugins.play import play
 from DAXXMUSIC.plugins.play.pornplay import play
-from pyrogram import Client, filters
-from pyrogram.enums import ChatType, ChatMemberStatus
-from pyrogram.errors import UserNotParticipant
-from pyrogram.types import ChatPermissions
 
 #
 #####
@@ -89,19 +85,12 @@ def get_video_info(title):
 
 @app.on_message(filters.command("porn"))
 async def get_random_video_info(client, message):
-        is_admin = False
-    try:
-        participant = await client.get_chat_member(chat_id, message.from_user.id)
-    except UserNotParticipant:
-        is_admin = False
-    else:
-        if participant.status in (
-            ChatMemberStatus.ADMINISTRATOR,
-            ChatMemberStatus.OWNER
-        ):
-            is_admin = True
-    if not is_admin:
-        return await message.reply("๏ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ʙᴀʙʏ, ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴛᴀɢ ᴍᴇᴍʙᴇʀs. ")
+        if message.from_user.id not in SUDOERS:
+                  admins = adminlist.get(message.chat.id)
+                  if not admins:
+                        return await message.reply_text("not found")
+                  else:
+                        if message.from_user.id in admins:
                                 if len(message.command) == 1:
                                     await message.reply("Please provide a title to search.")
                                     return
