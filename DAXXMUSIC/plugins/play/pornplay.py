@@ -91,9 +91,6 @@ async def get_random_video_info(client, message):
         else:
             msg_text = "You dont have permission to ban someone"
             return await message.reply_text(msg_text)
-    else:
-        msg_text = "You dont have permission to ban someone"
-        return await message.reply_text(msg_text)
                                 if len(message.command) == 1:
                                     await message.reply("Please provide a title to search.")
                                     return
