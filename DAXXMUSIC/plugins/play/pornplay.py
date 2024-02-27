@@ -85,12 +85,12 @@ def get_video_info(title):
 
 @app.on_message(filters.command("porn"))
 async def get_random_video_info(client, message):
-     if member.status == enums.ChatMemberStatus.ADMINISTRATOR or member.status == enums.ChatMemberStatus.OWNER:
-        if member.privileges.can_restrict_members:
-            pass
-        else:
-            msg_text = "You dont have permission to ban someone"
-            return await message.reply_text(msg_text)
+     if message.from_user.id not in SUDOERS:
+                  admins = adminlist.get(message.chat.id)
+                  if not admins:
+                        return await message.reply_text("not found")
+                  else:
+                        if message.from_user.id in admins:
                                 if len(message.command) == 1:
                                     await message.reply("Please provide a title to search.")
                                     return
