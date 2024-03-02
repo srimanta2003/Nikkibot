@@ -102,7 +102,7 @@ async def bot_stats(client, CallbackQuery, _):
     datasize = call["dataSize"] / 1024
     storage = call["storageSize"] / 1024
     served_chats = len(await get_served_chats())
-    served_users = (len(await get_sudoers()) -1)
+    served_users = len(await get_served_users())
     text = _["gstats_5"].format(
         app.mention,
         len(ALL_MODULES),
@@ -120,7 +120,7 @@ async def bot_stats(client, CallbackQuery, _):
         served_chats,
         served_users,
         len(BANNED_USERS),
-        (len(await get_sudoers()) -1),
+        len(await get_sudoers()),
         str(datasize)[:6],
         storage,
         call["collections"],
