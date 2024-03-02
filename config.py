@@ -33,6 +33,9 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 # ----------------------------------------------------------------
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 # ----------------------------------------------------------------
+SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
+# ----------------------------------------------------------------
+PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "2500"))
 
 # ----------------------------------------------------------------
 LOGGER_ID = int(getenv("LOGGER_ID", -1002133369721))
