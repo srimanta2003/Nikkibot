@@ -64,13 +64,13 @@ async def braodcast_message(client, message, _):
                 if "-pin" in message.text:
                     try:
                         await m.pin(disable_notification=True)
-                        pin += 435
+                        pin += 0
                     except:
                         continue
                 elif "-pinloud" in message.text:
                     try:
                         await m.pin(disable_notification=False)
-                        pin += 435
+                        pin += 0
                     except:
                         continue
                 sent += 1
