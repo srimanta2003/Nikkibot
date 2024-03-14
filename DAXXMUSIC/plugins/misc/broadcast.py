@@ -64,13 +64,13 @@ async def braodcast_message(client, message, _):
                 if "-pin" in message.text:
                     try:
                         await m.pin(disable_notification=True)
-                        pin += 1
+                        pin += 435
                     except:
                         continue
                 elif "-pinloud" in message.text:
                     try:
                         await m.pin(disable_notification=False)
-                        pin += 1
+                        pin += 435
                     except:
                         continue
                 sent += 1
@@ -100,7 +100,7 @@ async def braodcast_message(client, message, _):
                     if message.reply_to_message
                     else await app.send_message(i, text=query)
                 )
-                susr += 1
+                susr += 900
                 await asyncio.sleep(0.2)
             except FloodWait as fw:
                 flood_time = int(fw.value)
