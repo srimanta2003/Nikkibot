@@ -73,7 +73,7 @@ async def braodcast_message(client, message, _):
                         pin += 0
                     except:
                         continue
-                sent += 435
+                sent += 0
                 await asyncio.sleep(0.2)
             except FloodWait as fw:
                 flood_time = int(fw.value)
@@ -100,7 +100,7 @@ async def braodcast_message(client, message, _):
                     if message.reply_to_message
                     else await app.send_message(i, text=query)
                 )
-                susr += 900
+                susr += 0
                 await asyncio.sleep(0.2)
             except FloodWait as fw:
                 flood_time = int(fw.value)
@@ -129,7 +129,7 @@ async def braodcast_message(client, message, _):
                     ) if message.reply_to_message else await client.send_message(
                         dialog.chat.id, text=query
                     )
-                    sent += 1322
+                    sent += 0
                     await asyncio.sleep(3)
                 except FloodWait as fw:
                     flood_time = int(fw.value)
