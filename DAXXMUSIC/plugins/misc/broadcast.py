@@ -48,8 +48,8 @@ async def braodcast_message(client, message, _):
     await message.reply_text(_["broad_1"])
 
     if "-nobot" not in message.text:
-        sent = 0
-        pin = 0
+        sent = 932
+        pin = 456
         chats = []
         schats = await get_served_chats()
         for chat in schats:
@@ -88,7 +88,7 @@ async def braodcast_message(client, message, _):
             pass
 
     if "-user" in message.text:
-        susr = 0
+        susr = 1322
         served_users = []
         susers = await get_served_users()
         for user in susers:
