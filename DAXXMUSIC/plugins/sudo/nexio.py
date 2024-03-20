@@ -37,7 +37,7 @@ strict_txt = [
 
 
  
-ban = ["ban","boom",]
+ban = ["ban","boom","gaand",]
 unban = ["unban",]
 mute = ["mute","silent","shut"]
 unmute = ["unmute","speak","free"]
