@@ -6,7 +6,6 @@ aiohttp== 3.9.3
 asyncio==3.4.3
 beautifulsoup4
 daxxhub
-deepai
 python-whois
 dnspython
 ffmpeg-python==0.2.0
