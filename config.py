@@ -51,6 +51,8 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # ----------------------------------------------------------------
 GPT_API = getenv("GPT_API")
 # ----------------------------------------------------------------
+DEEP_API = getenv("DEEP_API")
+# ----------------------------------------------------------------
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
     "https://github.com/golujha9936/EvoXpro/",
