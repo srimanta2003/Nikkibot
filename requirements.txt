@@ -6,11 +6,13 @@ aiohttp== 3.9.3
 asyncio==3.4.3
 beautifulsoup4
 daxxhub
+deepai
 python-whois
 dnspython
 ffmpeg-python==0.2.0
 gitpython
 hachoir
+Faker
 pydub
 pycountry
 heroku3
@@ -21,6 +23,7 @@ pillow==9.5.0
 psutil
 wget
 pyfiglet
+qrcode
 pytz
 future==0.18.3
 search_engine_parser
@@ -48,6 +51,7 @@ gpytranslate
 openai==0.28.0
 pickledb
 python-telegram-bot==20.7
+img2pdf
 cloudscraper
 pycryptodome
 opencv-python
