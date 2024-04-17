@@ -39,7 +39,7 @@ strict_txt = [
  
 ban = ["ban","boom","gaand",]
 unban = ["unban",]
-mute = ["mute","silent","shut"]
+mute = ["mute","silent","shut","chup"]
 unmute = ["unmute","speak","free"]
 kick = ["kick", "out","nikaal","nikal"]
 promote = ["promote","adminship"]
