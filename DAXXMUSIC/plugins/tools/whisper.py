@@ -20,7 +20,7 @@ async def _whisper(_, inline_query):
                 title="💒 Whisper",
                 description=f"@{BOT_USERNAME} [ USERNAME | ID ] [ TEXT ]",
                 input_message_content=InputTextMessageContent(f"💒 Usage:\n\n@{BOT_USERNAME} [ USERNAME | ID ] [ TEXT ]"),
-                thumb_url="https://te.legra.ph/file/3eec679156a393c6a1053.jpg",
+                thumb_url="https://telegra.ph/file/8cb38dbdc3085de95225e.jpg",
                 reply_markup=switch_btn
             )
         ]
@@ -112,7 +112,7 @@ async def in_help():
             title="💒 Whisper",
             description=f"@YumikooBot [USERNAME | ID] [TEXT]",
             input_message_content=InputTextMessageContent(f"**📍Usage:**\n\n@YumikooBot (Target Username or ID) (Your Message).\n\n**Example:**\n@YumikooBot @username I Wanna Phuck You"),
-            thumb_url="https://te.legra.ph/file/3eec679156a393c6a1053.jpg",
+            thumb_url="https://telegra.ph/file/8cb38dbdc3085de95225e.jpg",
             reply_markup=switch_btn
         )
     ]
