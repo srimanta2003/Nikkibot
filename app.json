@@ -1,7 +1,7 @@
 {
-    "name": "EVOXPRO 𝙼𝚄𝚂𝙸𝙲",
+    "name": "Nikki X Music",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://telegra.ph/file/40305bd1cf787e5b3be21.jpg",
+    "logo": "https://graph.org/file/5690109178f081adf464d.mp4",
     "keywords": [
     "python3",
     "telegram",
@@ -14,12 +14,12 @@
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "12380656",
         "required": true
       },
       "API_HASH": {
         "description": "Get this value from https://my.telegram.org",
-        "value": "",
+        "value": "d927c13beaaf5110f25c505b7c071273",
         "required": true
       },
       "BOT_TOKEN": {
