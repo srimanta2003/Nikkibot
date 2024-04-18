@@ -14,13 +14,13 @@ API_HASH = getenv("API_HASH")
 # ------------------------------------------------------
 BOT_TOKEN = getenv("BOT_TOKEN")
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","EvoXpro")
+OWNER_USERNAME = getenv("OWNER_USERNAME","its_Aryaan")
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "EvoXpro")
+BOT_USERNAME = getenv("BOT_USERNAME" , "NikkiXmusic_bot")
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME" , "EvoXpro")
+BOT_NAME = getenv("BOT_NAME" , "Nikki X Music")
 # ---------------------------------------------------------
-ASSUSERNAME = getenv("ASSUSERNAME" , "MREVO")
+ASSUSERNAME = getenv("ASSUSERNAME" , "Aryan")
 # ---------------------------------------------------------
 
 
@@ -149,15 +149,15 @@ PING_IMG_URL = getenv(
     "PING_IMG_URL", "https://telegra.ph/file/f66e5843568d4b7f2a652.jpg"
 )
 PLAYLIST_IMG_URL = "https://graph.org/file/9409ec20e33ad13b1e3fd.jpg"
-STATS_IMG_URL = "https://telegra.ph/file/d30d11c4365c025c25e3e.jpg"
+STATS_IMG_URL = "https://graph.org/file/5690109178f081adf464d.mp4"
 TELEGRAM_AUDIO_URL = "https://graph.org/file/9409ec20e33ad13b1e3fd.jpg"
 TELEGRAM_VIDEO_URL = "https://graph.org/file/9409ec20e33ad13b1e3fd.jpg"
 STREAM_IMG_URL = "https://graph.org/file/93262d5ccd6411899d223.jpg"
 SOUNCLOUD_IMG_URL = "https://graph.org/file/4a9d3a5e7095675091a58.jpg"
 YOUTUBE_IMG_URL = "https://graph.org/file/37a03497569ef38de73f5.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/8a6f56ff9d3c0ecadcd31.mp4"
+SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/8a6f56ff9d3c0ecadcd31.mp4"
+SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/8a6f56ff9d3c0ecadcd31.mp4"
 
 # ------------------------------------------------------------------------
 # ------------------------------------------------------------------------
