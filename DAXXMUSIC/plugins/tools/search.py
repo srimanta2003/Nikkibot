@@ -1,4 +1,4 @@
-qfrom traceback import format_exc
+from traceback import format_exc
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from search_engine_parser.core.engines.google import Search as GoogleSearch
 from search_engine_parser.core.engines.stackoverflow import \
@@ -192,10 +192,6 @@ async def stack_search_(app: app, msg: Message):
         return
     except Exception as e:
         await to_del.delete()
-        await msg.reply_text(f"**sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ :\nʀᴇᴘᴏʀᴛ ᴀᴛ ɪᴛ** @its_aryaan")
+        await msg.reply_text(f"**sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ :\nʀᴇᴘᴏʀᴛ ᴀᴛ ɪᴛ** @its_Aryaan")
         print(f"error : {e}")
         return
-
-
-
-
