@@ -54,7 +54,7 @@
       },
       "DEEP_API": {
       "description": "Your DEEP API https://deepai.org/",
-      "value": "",
+      "value": "b72b398e-30b8-424e-bdf5-1f54cdaaf57a",
       "required": true
       },
       "GPT_API": {
