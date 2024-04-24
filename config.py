@@ -149,7 +149,7 @@ PING_IMG_URL = getenv(
     "PING_IMG_URL", "https://telegra.ph/file/f66e5843568d4b7f2a652.jpg"
 )
 PLAYLIST_IMG_URL = "https://graph.org/file/9409ec20e33ad13b1e3fd.jpg"
-STATS_IMG_URL = "https://graph.org/file/5690109178f081adf464d.mp4"
+STATS_IMG_URL = "https://graph.org/file/43ebadc94e8d95db9fd17.jpg"
 TELEGRAM_AUDIO_URL = "https://graph.org/file/9409ec20e33ad13b1e3fd.jpg"
 TELEGRAM_VIDEO_URL = "https://graph.org/file/9409ec20e33ad13b1e3fd.jpg"
 STREAM_IMG_URL = "https://graph.org/file/93262d5ccd6411899d223.jpg"
