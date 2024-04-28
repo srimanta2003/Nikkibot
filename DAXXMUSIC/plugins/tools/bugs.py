@@ -25,7 +25,7 @@ async def bugs(_, msg: Message):
     if msg.chat.username:
         chat_username = f"@{msg.chat.username}/`{msg.chat.id}`"
     else:
-        chat_username = f"ᴩʀɪᴠᴀᴛᴇ ɢʀᴏᴜᴩ/`{msg.chat.id}`"
+        chat_username = f"ρяιναтє gяσυρ/`{msg.chat.id}`"
 
     bugs = content(msg)
     user_id = msg.from_user.id
@@ -38,35 +38,35 @@ async def bugs(_, msg: Message):
     
 
     bug_report = f"""
-**#ʙᴜɢ : ** **tg://user?id={owner_id}**
+**#вυg : ** **tg://user?id={owner_id}**
 
-**ʀᴇᴩᴏʀᴛᴇᴅ ʙʏ : ** **{mention}**
-**ᴜsᴇʀ ɪᴅ : ** **{user_id}**
-**ᴄʜᴀᴛ : ** **{chat_username}**
+**яєρσятє∂ ву : ** **{mention}**
+**υι∂ : ** **{user_id}**
+**¢нαт-ℓιηк : ** **{chat_username}**
 
-**ʙᴜɢ : ** **{bugs}**
+**вυg : ** **{bugs}**
 
-**ᴇᴠᴇɴᴛ sᴛᴀᴍᴩ : ** **{datetimes}**"""
+**єνєηт ѕтαмρ : ** **{datetimes}**"""
 
     if msg.chat.type == "private":
-        await msg.reply_text("<b>» ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴏɴʟʏ ғᴏʀ ɢʀᴏᴜᴩs.</b>")
+        await msg.reply_text("<b>» тнιѕ σηℓу ƒσя gяσυρѕ.</b>")
         return
 
     if user_id == owner_id:
         if bugs:
             await msg.reply_text(
-                "<b>» ᴀʀᴇ ʏᴏᴜ ᴄᴏᴍᴇᴅʏ ᴍᴇ 🤣, ʏᴏᴜ'ʀᴇ ᴛʜᴇ ᴏᴡɴᴇʀ ᴏғ ᴛʜᴇ ʙᴏᴛ.</b>",
+                "<b>» вσт σωηєя нσ ααρ мυʝнѕє мαʝαк мαт кαяσ 🕊.</b>",
             )
             return
         else:
-            await msg.reply_text("<b>» ᴀʀᴇ ʏᴏᴜ ᴄᴏᴍᴇᴅʏ ᴍᴇ 🤣, ʏᴏᴜ'ʀᴇ ᴛʜᴇ ᴏᴡɴᴇʀ ᴏғ ᴛʜᴇ ʙᴏᴛ.</b>")
+            await msg.reply_text("<b>» вσт σωηєя нσ ααρ мυʝнѕє мαʝαк мαт кαяσ 🕊.</b>")
     elif user_id != owner_id:
         if bugs:
             await msg.reply_text(
-                f"<b>ʙᴜɢ ʀᴇᴩᴏʀᴛ : {bugs}</b>\n\n"
-                "<b>» ʙᴜɢ sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇᴩᴏʀᴛᴇᴅ ᴀᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ !</b>",
+                f"<b>вυg яєρσят : {bugs}</b>\n\n"
+                "<b>» ѕυ¢¢єѕѕƒυℓ Яєρσятє∂ </b>",
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("⌯ ᴄʟᴏsᴇ ⌯", callback_data="close_data")]]
+                    [[InlineKeyboardButton("⌯ ¢ℓσѕє ⌯", callback_data="close_data")]]
                 ),
             )
             await app.send_photo(
@@ -75,10 +75,10 @@ async def bugs(_, msg: Message):
                 caption=f"{bug_report}",
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("⌯ ᴠɪᴇᴡ ʙᴜɢ ⌯", url=f"{msg.link}")],
+                        [InlineKeyboardButton("⌯ νιєω вυg ⌯", url=f"{msg.link}")],
                         [
                             InlineKeyboardButton(
-                                "⌯ ᴄʟᴏsᴇ ⌯", callback_data="close_send_photo"
+                                "⌯ ¢ℓσѕє ⌯", callback_data="close_send_photo"
                             )
                         ],
                     ]
@@ -86,7 +86,7 @@ async def bugs(_, msg: Message):
             )
         else:
             await msg.reply_text(
-                f"<b>» ɴᴏ ʙᴜɢ ᴛᴏ ʀᴇᴩᴏʀᴛ !</b>",
+                f"<b>» ησ вυg яєρσятѕ !</b>",
             )
 
 
@@ -96,7 +96,7 @@ async def bugs(_, msg: Message):
 async def close_send_photo(_,  query :CallbackQuery):
     is_admin = await app.get_chat_member(query.message.chat.id, query.from_user.id)
     if not is_admin.privileges.can_delete_messages:
-        await query.answer("ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ʀɪɢʜᴛs ᴛᴏ ᴄʟᴏsᴇ ᴛʜɪs.", show_alert=True)
+        await query.answer("уσυ ∂ση'т нανє яιgнтѕ тσ ¢ℓσѕє тнιѕ.", show_alert=True)
     else:
         await query.message.delete()
 
