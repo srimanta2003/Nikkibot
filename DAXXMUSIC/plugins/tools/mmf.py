@@ -11,10 +11,10 @@ async def mmf(_, message: Message):
     reply_message = message.reply_to_message
 
     if len(message.text.split()) < 2:
-        await message.reply_text("**Give me text after /mmf to memify.\n│ \n└➻ ᴍᴀᴅᴇ ʙʏ -𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ**")
+        await message.reply_text("**gινє мє тєχт αƒтєя /mmf тσ мємιƒу.\n│ \n└➻ мα∂є ву -[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN)**")
         return
 
-    msg = await message.reply_text("**Memifying this image! ✊🏻\n│ \n└➻ ᴍᴀᴅᴇ ʙʏ -𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ**")
+    msg = await message.reply_text("**мємιƒуιηg тнιѕ ιмαgє! 🐱\n│ \n└➻ мα∂є ву -[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN)**")
     text = message.text.split(None, 1)[1]
     file = await app.download_media(reply_message)
 
