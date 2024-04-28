@@ -145,4 +145,4 @@ async def help(client: Client, message: Message):
     filters.command("gali", prefixes=["/", "!", "%", ",", "", ".", "@", "#"])
     & filters.group )
 async def help(client: Client, message: Message):
-    await message.reply_text("**𝐓𝐡𝐢𝐬 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐈𝐬 𝐎𝐧𝐥𝐲 𝐅𝐨𝐫 𝐃𝐦, 𝐆𝐨 𝐓𝐨 𝐁𝐨𝐭 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐀𝐧𝐝 𝐓𝐲𝐩𝐞 /gali 𝐂𝐨𝐦𝐦𝐚𝐧𝐝.**")
+    await message.reply_text("**gσ тσ вσт ∂м αη∂ υѕє /gali αη∂ ѕєє мαgι¢🪄**")
