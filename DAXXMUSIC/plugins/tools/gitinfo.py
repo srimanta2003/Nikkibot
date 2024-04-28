@@ -17,7 +17,7 @@ async def daxxhub(_, message):
 @app.on_message(filters.command(["github", "git"]))
 async def github(_, message):
     if len(message.command) != 2:
-        await message.reply_text("/git 𝐑ᴇᴅᴢᴏɴᴇ 𝐍ᴇᴛᴡᴏʀᴋ's")
+        await message.reply_text("/git νєησм ραρα вσℓ's")
         return
 
     username = message.text.split(None, 1)[1]
@@ -45,16 +45,16 @@ async def github(_, message):
 
                 caption = f"""ɢɪᴛʜᴜʙ ɪɴғᴏ ᴏғ {name}
                 
-ᴜsᴇʀɴᴀᴍᴇ: {username}
-ʙɪᴏ: {bio}
-ʟɪɴᴋ: [Here]({url})
-ᴄᴏᴍᴩᴀɴʏ: {company}
-ᴄʀᴇᴀᴛᴇᴅ ᴏɴ: {created_at}
-ʀᴇᴩᴏsɪᴛᴏʀɪᴇs: {repositories}
-ʙʟᴏɢ: {blog}
-ʟᴏᴄᴀᴛɪᴏɴ: {location}
-ғᴏʟʟᴏᴡᴇʀs: {followers}
-ғᴏʟʟᴏᴡɪɴɢ: {following}"""
+υѕєяηαмє: {username}
+вισ: {bio}
+ℓιηк: [Here]({url})
+¢σмραηу: {company}
+¢яєαтє∂ ση: {created_at}
+яєρσѕιтσяуѕ: {repositories}
+вℓσg: {blog}
+ℓσ¢αтιση: {location}
+ƒσℓℓσωєяѕ: {followers}
+ƒσℓℓσωιηg: {following}"""
 
             except Exception as e:
                 print(str(e))
