@@ -12,7 +12,7 @@ async def tiny_sticker(client, message):
         await message.reply("Please reply to a sticker")
         return
     kontol = await message.reply("Processing please wait")
-    await kontol.edit_text("🐾")
+    await kontol.edit_text("🕊")
     ik = await app.download_media(reply)
     im1 = Image.open("DAXXMUSIC/assets/mohit.png")
     if ik.endswith(".tgs"):
