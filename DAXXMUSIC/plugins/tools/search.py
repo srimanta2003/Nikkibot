@@ -17,9 +17,9 @@ stsearch = StackSearch()
 
 def ikb(rows=None, back=False, todo="start_back"):
     """
-    rows = pass the rows
-    back - if want to make back button
-    todo - callback data of back button
+    яσωѕ = ραѕѕ тнє яσωѕ
+    вα¢к - ιƒ ωαηт тσ мαкє вα¢к вυттση
+    тσ∂σ - ¢αℓℓвα¢к ∂αтα σƒ вα¢к вυттση
     """
     if rows is None:
         rows = []
@@ -64,8 +64,8 @@ def btn(text, value, type="callback_data"):
 async def search_(app: app, msg: Message):
     split = msg.text.split(None, 1)
     if len(split) == 1:
-        return await msg.reply_text("**ɢɪᴠᴇ ǫᴜᴇʀʏ ᴛᴏ sᴇᴀʀᴄʜ\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
-    to_del = await msg.reply_text("**sᴇᴀʀᴄʜɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ...\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
+        return await msg.reply_text("**gινє тσ qυєяу ѕєαя¢н\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
+    to_del = await msg.reply_text("**ѕєαя¢нιηg ση gσσgℓє...\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
     query = split[1]
     try:
         result = await gsearch.async_search(query)
@@ -109,21 +109,21 @@ async def search_(app: app, msg: Message):
             ]
         )
 
-        txt = f"**ʜᴇʀᴇ ᴀʀᴇ ᴛʜᴇ ʀᴇsᴜʟᴛs ᴏғ ʀǫᴜᴇsᴛᴇᴅ : {query.title()}**"
+        txt = f"**нєяє αяє тнє яєѕυℓтѕ σƒ яqѕтє∂ : {query.title()}**"
         await to_del.delete()
         await msg.reply_text(txt, reply_markup=keyboard)
         return
     except NoResultsFound:
         await to_del.delete()
-        await msg.reply_text("**ɴᴏ ʀᴇsᴜʟᴛ ғᴏᴜɴᴅ ᴄᴏʀʀᴇsᴘᴏɴᴅɪɴɢ ᴛᴏ ʏᴏᴜʀ ǫᴜᴇʀʏ\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
+        await msg.reply_text("**ησ яєѕυℓт ƒσυη∂ ¢σяяєѕρση∂ιηg тσ уσυя qυєяу\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
         return
     except NoResultsOrTrafficError:
         await to_del.delete()
-        await msg.reply_text("****ɴᴏ ʀᴇsᴜʟᴛ ғᴏᴜɴᴅ ᴅᴜᴇ ᴛᴏ ᴛᴏᴏ ᴍᴀɴʏ ᴛʀᴀғғɪᴄ\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
+        await msg.reply_text("****ησ яєѕυℓт ƒσυη∂ ∂υє тσ мαηу тяαƒƒι¢\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
         return
     except Exception as e:
         await to_del.delete()
-        await msg.reply_text(f"**sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ :\nʀᴇᴘᴏʀᴛ ᴀᴛ ɪᴛ** мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN")
+        await msg.reply_text(f"**ѕσмєтнιηg ωєηт ωяσηg :\nяєαρσят αт ιт** мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN")
         print(f"error : {e}")
         return
 
@@ -133,8 +133,8 @@ async def search_(app: app, msg: Message):
 async def stack_search_(app: app, msg: Message):
     split = msg.text.split(None, 1)
     if len(split) == 1:
-        return await msg.reply_text("**ɢɪᴠᴇ ǫᴜᴇʀʏ ᴛᴏ sᴇᴀʀᴄʜ\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
-    to_del = await msg.reply_text("**sᴇᴀʀᴄʜɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ...\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
+        return await msg.reply_text("**gινє тσ qυєяу ѕєαя¢н\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
+    to_del = await msg.reply_text("**ѕєαя¢нιηg ση gσσgℓє...\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN**")
     query = split[1]
     try:
         result = await stsearch.async_search(query)
@@ -178,20 +178,20 @@ async def stack_search_(app: app, msg: Message):
             ]
         )
 
-        txt = f"**ʜᴇʀᴇ ᴀʀᴇ ᴛʜᴇ ʀᴇsᴜʟᴛs ᴏғ ʀǫᴜᴇsᴛᴇᴅ : {query.title()}**"
+        txt = f"**нєяє αяє тнє яєѕυℓтѕ σƒ яqѕтє∂ : {query.title()}**"
         await to_del.delete()
         await msg.reply_text(txt, reply_markup=keyboard)
         return
     except NoResultsFound:
         await to_del.delete()
-        await msg.reply_text("**ɴᴏ ʀᴇsᴜʟᴛ ғᴏᴜɴᴅ ᴄᴏʀʀᴇsᴘᴏɴᴅɪɴɢ ᴛᴏ ʏᴏᴜʀ ǫᴜᴇʀʏ**")
+        await msg.reply_text("**ησ яєѕυℓт ƒσυη∂ ¢σяяєѕρση∂ιηg тσ уσυя qυєяу**")
         return
     except NoResultsOrTrafficError:
         await to_del.delete()
-        await msg.reply_text("****ɴᴏ ʀᴇsᴜʟᴛ ғᴏᴜɴᴅ ᴅᴜᴇ ᴛᴏ ᴛᴏᴏ ᴍᴀɴʏ ᴛʀᴀғғɪᴄ**")
+        await msg.reply_text("****ησ яєѕυℓт ƒσυη∂ ∂υє тσ мαηу тяαƒƒι¢**")
         return
     except Exception as e:
         await to_del.delete()
-        await msg.reply_text(f"**sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ :\nʀᴇᴘᴏʀᴛ ᴀᴛ ɪᴛ** мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN")
+        await msg.reply_text(f"**ѕσмєтнιηg ωєηт ωяσηg :\nяєαρσят αт ιт** мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN")
         print(f"error : {e}")
         return
