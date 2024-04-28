@@ -7,5 +7,5 @@ from DAXXMUSIC import app
 def text_to_speech(client, message):
     text = message.text.split(' ', 1)[1]
     tts = gTTS(text=text, lang='hi')
-    tts.save('Nikki.mp3')
-    client.send_audio(message.chat.id, 'nikki.mp3')
+    tts.save('Venom.mp3')
+    client.send_audio(message.chat.id, 'Venom.mp3')
