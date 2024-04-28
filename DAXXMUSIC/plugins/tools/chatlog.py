@@ -36,7 +36,16 @@ async def join_watcher(_, message):
                 f"🕊 α∂∂є∂-ву: {message.from_user.mention}"
             )
             await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton(f"sᴇᴇ ɢʀᴏᴜᴘ👀
-        ", url=f"{link}")]
+                [InlineKeyboardButton(f"¢нє¢к gяσυρ", url=f"{link}")]
             ]))
 
+@app.on_message(filters.left_chat_member)
+async def on_left_chat_member(_, message: Message):
+    if (await app.get_me()).id == message.left_chat_member.id:
+        remove_by = message.from_user.mention if message.from_user else "υηкησωη-υѕєя"
+        title = message.chat.title
+        username = f"@{message.chat.username}" if message.chat.username else "ρяιναтє-¢нαт"
+        chat_id = message.chat.id
+        left = f"✫ <b><u>#ℓєƒт-gяσυρ</u></b> ✫\n\n¢нαт-тιтℓє : {title}\n\n¢нαт-ι∂ : {chat_id}\n\nкι¢кє∂ ву : {remove_by}\n\nвσт : @{app.username}"
+        await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=left)
+        
