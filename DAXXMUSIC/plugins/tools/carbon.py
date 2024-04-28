@@ -19,13 +19,13 @@ async def make_carbon(code):
 async def _carbon(client, message):
     replied = message.reply_to_message
     if not replied:
-        await message.reply_text("**ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴀᴋᴇ ᴀ ᴄᴀʀʙᴏɴ.**")
+        await message.reply_text("**яєρℓу тσ α тєχт мѕg тσ мαкє α ¢αявση.**")
         return
     if not (replied.text or replied.caption):
-        return await message.reply_text("**ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴍᴀᴋᴇ ᴀ ᴄᴀʀʙᴏɴ.**")
-    text = await message.reply("Processing...")
+        return await message.reply_text("**яєρℓу тσ α тєχт мѕg тσ мαкє α ¢αявση.**")
+    text = await message.reply("мαкєιηgg...")
     carbon = await make_carbon(replied.text or replied.caption)
-    await text.edit("**ᴜᴘʟᴏᴀᴅɪɴɢ...**")
+    await text.edit("**ѕєη∂ιηg...**")
     await message.reply_photo(carbon)
     await text.delete()
     carbon.close()
