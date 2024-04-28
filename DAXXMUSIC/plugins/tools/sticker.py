@@ -12,16 +12,16 @@ from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 
 ######### sticker id
 
-@app.on_message(filters.command("st"))
+@app.on_message(filters.command("kang"))
 def generate_sticker(client, message):
     if len(message.command) == 2:
         sticker_id = message.command[1]
         try:
             client.send_sticker(message.chat.id, sticker=sticker_id)
         except Exception as e:
-            message.reply_text(f"Error: {e}")
+            message.reply_text(f"єяяσя: {e}")
     else:
-        message.reply_text("Please provide a sticker ID after /st command.")
+        message.reply_text("ρℓєαѕє ρяσνι∂є α ѕтι¢кєя ι∂ αƒтєя /kang ¢σммαη∂.")
 
 
 #---------
@@ -32,7 +32,7 @@ def generate_sticker(client, message):
 
 @app.on_message(filters.command("packkang"))
 async def _packkang(app :app,message):  
-    txt = await message.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ....**")
+    txt = await message.reply_text("**мαкιηg....**")
     if not message.reply_to_message:
         await txt.edit('ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ')
         return
@@ -40,7 +40,7 @@ async def _packkang(app :app,message):
         await txt.edit('ʀᴇᴘʟʏ ᴛᴏ sᴛɪᴄᴋᴇʀ')
         return
     if message.reply_to_message.sticker.is_animated or  message.reply_to_message.sticker.is_video:
-        return await txt.edit("ʀᴇᴘʟʏ ᴛᴏ ᴀ ɴᴏɴ-ᴀɴɪᴍᴀᴛᴇᴅ sᴛɪᴄᴋᴇʀ")
+        return await txt.edit("яєρℓу тσ α ηση-αηιмαтє∂ ѕтι¢кєя")
     if len(message.command) < 2:
         pack_name =  f'{message.from_user.first_name}_sticker_pack_by_@{BOT_USERNAME}'
     else :
@@ -79,7 +79,7 @@ async def _packkang(app :app,message):
                 stickers=sticks,
             )
         )
-        await txt.edit(f"**ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴋᴀɴɢᴇᴅ ʟɪɴᴋ**!\n**ᴛᴏᴛᴀʟ sᴛɪᴄᴋᴇʀ **: {len(sticks)}",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴘᴀᴄᴋ ʟɪɴᴋ",url=f"http://t.me/addstickers/{short_name}")]]))
+        await txt.edit(f"**нєяє ιѕ уσυя ѕтι¢кєя ρα¢к ℓιηк**!\n**тσтαℓ ѕтι¢кєя **: {len(sticks)}",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ρα¢к-ℓιηк",url=f"http://t.me/addstickers/{short_name}")]]))
     except Exception as e:
         await message.reply(str(e))
 
@@ -88,14 +88,14 @@ async def _packkang(app :app,message):
 @app.on_message(filters.command(["stickerid","stid"]))
 async def sticker_id(app: app, msg):
     if not msg.reply_to_message:
-        await msg.reply_text("Reply to a sticker")        
+        await msg.reply_text("яєρℓу тσ α ѕтι¢кєя")        
     elif not msg.reply_to_message.sticker:
-        await msg.reply_text("Reply to a sticker")        
+        await msg.reply_text("яєρℓу тσ α ѕтι¢кєя")        
     st_in = msg.reply_to_message.sticker
     await msg.reply_text(f"""
-⊹ <u>**sᴛɪᴄᴋᴇʀ ɪɴғᴏ**</u> ⊹
-**⊚ sᴛɪᴄᴋᴇʀ ɪᴅ **: `{st_in.file_id}`\n
-**⊚ sᴛɪᴄᴋᴇʀ ᴜɴɪǫᴜᴇ ɪᴅ **: `{st_in.file_unique_id}`
+⊹ <u>**ѕтι¢кєя ιηƒσ**</u> ⊹
+**⊚ ѕтι¢кєя ι∂ **: `{st_in.file_id}`\n
+**⊚ υηιqυє ѕтι¢кєя ι'∂ **: `{st_in.file_unique_id}`
 """)
 
 
