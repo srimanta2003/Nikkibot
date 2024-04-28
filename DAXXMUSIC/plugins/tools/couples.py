@@ -45,11 +45,11 @@ today = str(dt()[0])
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
-        return await message.reply_text("ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs.")
+        return await message.reply_text("тнιѕ ση ωσяк ʝη ¢нαт gяσυρ.")
     try:
      #  is_selected = await get_couple(cid, today)
      #  if not is_selected:
-         msg = await message.reply_text("ɢᴇɴᴇʀᴀᴛɪɴɢ ᴄᴏᴜᴘʟᴇs ɪᴍᴀɢᴇ...")
+         msg = await message.reply_text("gєη ¢συρℓє ιмg...")
          #GET LIST OF USERS
          list_of_users = []
 
@@ -106,9 +106,9 @@ async def ctest(_, message):
          img.save(f'test_{cid}.png')
     
          TXT = f"""
-**ᴛᴏᴅᴀʏ's ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ :
+**тσ∂αу'ѕ ¢συρℓєѕ :
 {N1} + {N2} = 💚
-ɴᴇxᴛ ᴄᴏᴜᴘʟᴇs ᴡɪʟʟ ʙᴇ sᴇʟᴇᴄᴛᴇᴅ ᴏɴ {tomorrow} !!**
+ηєχт ¢συρℓєѕ ѕєℓє¢тє∂ ση {tomorrow} !!**
 """
     
          await message.reply_photo(f"test_{cid}.png", caption=TXT, reply_markup=InlineKeyboardMarkup(POLICE),
@@ -150,7 +150,7 @@ async def ctest(_, message):
 
 __mod__ = "COUPLES"
 __help__ = """
-**» /couples** - Get Todays Couples Of The Group In Interactive View
+**» /couples** - gєт тσ∂αуѕ ¢συρℓєѕ σƒ тнє gяσυρ ιη ιηтєяα¢тινє νιєω
 """
 
 
