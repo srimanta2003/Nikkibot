@@ -26,16 +26,17 @@ async def join_watcher(_, message):
         if member.id == app.id:
             count = await app.get_chat_members_count(chat.id)
             msg = (
-                f"📝 ᴍᴜsɪᴄ ʙᴏᴛ ᴀᴅᴅᴇᴅ ɪɴ ᴀ ɴᴇᴡ ɢʀᴏᴜᴘ\n\n"
+                f"вσт α∂∂є∂ ηєω gяσυρ\n\n"
                 f"____________________________________\n\n"
-                f"📌 ᴄʜᴀᴛ ɴᴀᴍᴇ: {chat.title}\n"
-                f"🍂 ᴄʜᴀᴛ ɪᴅ: {chat.id}\n"
-                f"🔐 ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ: @{chat.username}\n"
-                f"🛰 ᴄʜᴀᴛ ʟɪɴᴋ: [ᴄʟɪᴄᴋ]({link})\n"
-                f"📈 ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs: {count}\n"
-                f"🤔 ᴀᴅᴅᴇᴅ ʙʏ: {message.from_user.mention}"
+                f"🪄 ¢нαт-ηαмє: {chat.title}\n"
+                f"🍂 ¢нαт-ι∂: {chat.id}\n"
+                f"👀 ¢нαт-υѕєяηαмє: @{chat.username}\n"
+                f"🔗 ¢нαт-ℓιηк: [тσυ¢н]({link})\n"
+                f"🎏 gяσυρ-мємвєяѕ: {count}\n"
+                f"🕊 α∂∂є∂-ву: {message.from_user.mention}"
             )
             await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton(f"sᴇᴇ ɢʀᴏᴜᴘ👀", url=f"{link}")]
+                [InlineKeyboardButton(f"sᴇᴇ ɢʀᴏᴜᴘ👀
+        ", url=f"{link}")]
             ]))
 
