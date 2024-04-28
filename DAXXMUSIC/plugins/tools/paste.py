@@ -58,18 +58,18 @@ async def isPreviewUp(preview: str) -> bool:
 @app.on_message(filters.command("paste"))
 async def paste_func(_, message):
     if not message.reply_to_message:
-        return await message.reply_text("**ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ /paste\n│ \n└➻ ᴍᴀᴅᴇ ʙʏ -𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ**")
+        return await message.reply_text("**яєρℓу тσ α мѕg ωιтн /paste\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN)**")
 
-    m = await message.reply_text("**ᴘᴀsᴛɪɴɢ ᴘʟs ᴡᴀɪᴛ 10 sᴇᴄ....\n│ \n└➻ ᴍᴀᴅᴇ ʙʏ -𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ**")
+    m = await message.reply_text("**ραѕтιηg ρℓєαѕє ωαιт ѕσмє ѕє¢ση∂ѕ....\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN)**")
 
     if message.reply_to_message.text:
         content = str(message.reply_to_message.text)
     elif message.reply_to_message.document:
         document = message.reply_to_message.document
         if document.file_size > 1048576:
-            return await m.edit("**ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ᴘᴀsᴛᴇ ғɪʟᴇs sᴍᴀʟʟᴇʀ ᴛʜᴀɴ 1ᴍʙ.**")
+            return await m.edit("**уσυ ¢αη σηℓу ραѕтє ƒιℓєѕ ѕмℓℓєя тнαη 1мв.**")
         if not pattern.search(document.mime_type):
-            return await m.edit("**ᴏɴʟʏ ᴛᴇxᴛ ғɪʟᴇs ᴄᴀɴ ʙᴇ ᴘᴀsᴛᴇᴅ.**")
+            return await m.edit("**σηℓу тєχт & ƒιℓєѕ ¢αη вє ραѕтє.**")
 
         doc = await message.reply_to_message.download()
         async with aiofiles.open(doc, mode="r") as f:
@@ -87,12 +87,12 @@ async def paste_func(_, message):
             carbon = await make_carbon(content_chunk)
 
             await m.delete()
-            text = await message.reply("**✍️ᴘᴀsᴛᴇᴅ ᴏɴ ᴄᴀʀʙᴏɴ ᴘᴀɢᴇ !\n│ \n└➻ ᴍᴀᴅᴇ ʙʏ -𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ**")
+            text = await message.reply("**ραѕтє∂ ση ¢αявση ραgє !\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN)**")
             await asyncio.sleep(0.4)
-            await text.edit("**ᴜᴘʟᴏᴀᴅɪɴɢ ᴜɴᴅᴇʀ 5 sᴇᴄ.\n│ \n└➻ ᴍᴀᴅᴇ ʙʏ -𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ**")
+            await text.edit("**υρℓσα∂ιηg ιη ѕє¢ση∂ѕ.\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN)**")
             await asyncio.sleep(0.4)
-            await text.edit("**ᴜᴘʟᴏᴀᴅɪɴɢ ᴜɴᴅᴇʀ 5 sᴇᴄ....\n│ \n└➻ ᴍᴀᴅᴇ ʙʏ -𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ**")
-            caption = f"🥀ᴛʜɪs ɪs  {page_number} ᴘᴀɢᴇ - {current_line + 1} to {end_line} ʟɪɴᴇs..\n sᴇɴᴅɪɴɢ ᴍᴏʀᴇ ʟɪɴᴇs ɪғ ʜᴀᴠᴇ ᴏɴ ɴᴇxᴛ ᴘᴀɢᴇ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...\n│ \n└➻ ᴍᴀᴅᴇ ʙʏ -𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ"
+            await text.edit("**υρℓσα∂ιηg ιη ѕє¢ση∂ѕ....\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN)**")
+            caption = f"тнιѕ ιѕ {page_number} ραgє - {current_line + 1} to {end_line} ℓιηєѕ..\n ѕєη∂ιηg мσяє ℓιηєѕ ιƒ нανє ση ηєχт ραgє ρℓєαѕє ωαιт...\n│ \n└➻ мα∂є ву-[-𓆩𝙑𝙀𝙉𝙊𝙈 ꭗ‌ 𝙊𝙋𓆪 ↠💸⃤ˎ](https://t.me/ITS_ARYAAN)"
             await message.reply_photo(carbon, caption=caption)
             await text.delete()
             carbon.close()
@@ -102,4 +102,4 @@ async def paste_func(_, message):
             await sleep(1)  # Optional: Add a sleep to avoid rate limiting or being blocked
 
     else:
-        await m.edit("**Unsupported file type. Only text files can be pasted.**")
+        await m.edit("**υηѕυρρσятє∂ ƒιℓє туρє. σηℓу тєχт ƒιℓєѕ ¢αη вє ραѕтє∂.**")
