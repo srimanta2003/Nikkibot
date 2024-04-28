@@ -194,13 +194,13 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                 member.chat.id,
                 photo=welcomeimg,
                 caption=f"""
-**❅────✦ ᴡᴇʟᴄᴏᴍᴇ ✦────❅**
+**❅────✦ ωєℓ¢σмє ✦────❅**
 
 ▰▰▰▰▰▰▰▰▰▰▰▰▰
-**➻ ɴᴀᴍᴇ »** {user.mention}
-**➻ ɪᴅ »** `{user.id}`
-**➻ ᴜ_ɴᴀᴍᴇ »** @{user.username}
-**➻ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs »** {count}
+**➻ ηαмє »** {user.mention}
+**➻ υι∂ »** `{user.id}`
+**➻ υѕєяɴᴀᴍᴇ »** @{user.username}
+**➻ тσтαℓ мємвєяѕ »** {count}
 ▰▰▰▰▰▰▰▰▰▰▰▰▰
 
 **❅─────✧❅✦❅✧─────❅**
