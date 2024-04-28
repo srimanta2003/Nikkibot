@@ -15,7 +15,7 @@ from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 async def upscale_image(app, message):
     try:
         if not message.reply_to_message or not message.reply_to_message.photo:
-            await message.reply_text("**ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ɪᴍᴀɢᴇ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ɪᴛ.**")
+            await message.reply_text("**ρℓєαѕє яєρℓу тσ αη ιмg тσ υρѕ¢αℓє ιт.**")
             return
 
         image = message.reply_to_message.photo.file_id
@@ -37,12 +37,12 @@ async def upscale_image(app, message):
         await client.send_document(
             message.chat.id,
             document="upscaled.png",
-            caption="**ʜᴇʀᴇ ɪs ᴛʜᴇ ᴜᴘsᴄᴀʟᴇᴅ ɪᴍᴀɢᴇ!**",
+            caption="**нєяє ιѕ тнє υρѕ¢αℓє∂ ιмg!**",
         )
 
     except Exception as e:
-        print(f"**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ**: {e}")
-        await message.reply_text("**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ**.")
+        print(f"**ƒαιℓє∂ тσ υρѕ¢αℓє∂ тнє ιмg**: {e}")
+        await message.reply_text("**ƒαιℓє∂ тσ υρѕ¢αℓє∂ тнє ιмg. ρℓєαѕє тяу αgαιη**.")
 
 
 # ------------
@@ -50,7 +50,7 @@ async def upscale_image(app, message):
 
 waifu_api_url = 'https://api.waifu.im/search'
 
-# IAM_DAXX
+# Its_Aryaan
 
 def get_waifu_data(tags):
     params = {
@@ -76,7 +76,7 @@ def waifu_command(client, message):
             image_url = first_image['url']
             message.reply_photo(image_url)
         else:
-            message.reply_text("No waifu found with the specified tags.")
+            message.reply_text("ησ ωαιƒυ ƒσυη∂ ωιтн тнє ѕρє¢ιƒιє∂ тαgѕ.")
 
     except Exception as e:
-        message.reply_text(f"An error occurred: {str(e)}")
+        message.reply_text(f"αη єяяσя σ¢¢υяяє∂: {str(e)}")
