@@ -30,7 +30,7 @@ ROY = [
         InlineKeyboardButton(
             text="ԋҽɾσƙυ ƈƈ",
             url=f"https://t.me/its_Aryaan"),
-        InlineKeyboardButton(text="αηу qυєѕтιση мєѕѕ нєяє", url=f"https://t.me/+fRwiVt_xEvk5MWZl")
+        InlineKeyboardButton(text="αηу qυєѕтιση мєѕѕ нєяє", url=f"https://t.me/+ltcBIh_D10I4ZGNl")
     ],
 ]
 
