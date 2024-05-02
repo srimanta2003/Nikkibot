@@ -24,17 +24,17 @@ update() {
 	pprint "\n\nUpdating package list.. "
 	sudo apt update 2>&1 | grep "can be upgraded" &>/dev/null
 	if [ $? -eq 0 ]; then
-		pprint "UPDATE AVAILABLE" "cgreen"
+		pprint "υρ∂αтє αναιℓαвℓє" "cgreen"
 		pprint "\n\nDo you want to automatically upgrade (y/n)?"
 		if yesnoprompt; then
-			pprint "\n\nUpgrading packages.. "
+			pprint "\n\nυρgяα∂ιηg ρα¢кαgєѕ.. "
 			sudo apt upgrade -y &>/dev/null &&
 			pprint "DONE!\n\n" "cgreen" || (pprint "FAIL.\n\n" "cred"; exit 1)
 		else
 			echo
 		fi
 	else
-		pprint "ALREADY UP TO DATE\n\n" "cgreen"
+		pprint "αℓяєα∂у υρ тσ ∂αтє\n\n" "cgreen"
 	fi
 }
 
@@ -48,10 +48,10 @@ packages(){
 	if ! command -v ffmpeg &>/dev/null; then
 		pprint "Couldn't found ffmpeg, installing now..."
 		if sudo apt install ffmpeg -y &>/dev/null;then
-			pprint "SUCCESS.\n\n" "cgreen"
+			pprint "ѕυ¢¢єѕѕ.\n\n" "cgreen"
 		else
 			pprint "FAIL.\n\n" "cred"
-			pprint "You need to install ffmpeg manually in order to deploy AnonXMusic, exiting...\n" "cblue"
+			pprint "уσυ ηєє∂ тσ ιηѕтαℓℓ ƒƒмρєg мαηυαℓℓу ιη σя∂єя тσ ∂єρℓσу ηιккιχмυѕι¢, єχιтιηg...\n" "cblue"
 			exit 1
 		fi
 	fi
@@ -122,5 +122,5 @@ STRING_SESSION = $string_session
 OWNER_ID = $ownid""" > .env
 clear
 
-pprint "\n\n\nThanks for using EvoXpro installer, your vars have been saved successfully ! \nIf you wanna add more variables add them in your env by : vi .env"
+pprint "\n\n\nтнαηкѕ ƒσя υѕιηg ηιккι χ мυѕι¢ ιηѕтαℓℓєя, уσυя ναяѕ нανє вєєη ѕανє∂ ѕυ¢¢єѕѕƒυℓℓу ! \nιƒ уσυ ωαηηα α∂∂ мσяє ναяιαвℓєѕ α∂∂ тнєм ιη уσυя єην ву : vi .env"
 pprint "\n\nNow you can start the bot by : bash start\n\n"
